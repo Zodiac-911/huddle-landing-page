@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(images/bg-desktop.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  font-family: "Open Sans";
+  padding-top: 60px;
+}
+
+.max-width {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.logo {
+  height: 70px;
+}
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin-top: 90px;
+  width: 100%;
+  column-gap: 60px;
+}
+.dm-svg {
+  width: 100%;
+  height: auto;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+.p1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 400;
+  max-width: 600px;
+  font-weight: bold;
+  margin-top: 32px;
+  font-family: Poppins;
+}
+.p2 {
+  color: white;
+  padding-top: 32px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: "Open Sans";
+
+  max-width: 750px;
+}
+button {
+  display: block;
+  color: hsl(257, 40%, 49%);
+  margin-top: 32px;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  height: 65px;
+  width: 230px;
+  font-size: 20px;
+  box-shadow: 2px 4px 12px 2px rgba(0, 0, 0, 0.39);
+  transition: all 0.3s;
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+.sm {
+  display: flex;
+  justify-content: end;
+  gap: 28px;
+}
+
+.sm > div {
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  padding: 8px;
+  transition: all 0.3s;
+  margin-top: 150px;
+}
+.sm-ico {
+  height: 20px;
+  width: 20px;
+}
+.sm > div:hover {
+  border-color: #e246e2;
+  cursor: pointer;
+  color: #e246e2;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-image: url(images/bg-mobile.svg);
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .dm-svg {
+    height: auto;
+    width: 100%;
+  }
+  .logo {
+    height: 40px;
+  }
+  .p1 {
+    font-size: 30px;
+    text-align: center;
+    padding-left: 0;
+  }
+  .p2 {
+    font-size: 18px;
+    text-align: center;
+    padding-left: 0;
+  }
+  button {
+    margin: 32px auto 0 auto;
+    height: 50px;
+    width: 250px;
+    font-size: 15px;
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.39);
+  }
+  .sm {
+    gap: 10px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .sm-ico {
+    height: 20px;
+    width: 20px;
+  }
+  .sm > div {
+    margin-top: unset;
+  }
+}
